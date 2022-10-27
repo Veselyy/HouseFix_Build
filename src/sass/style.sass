@@ -200,7 +200,7 @@ body
         padding: 19px 80px
     &__contacts
         display: flex
-        @media ( max-width:600px )
+        @media ( max-width:1100px )
             flex-direction: column
 
     &__item1
@@ -209,6 +209,8 @@ body
         @media ( max-width:1300px )
             width: 100%
             margin-right: 0
+        @media ( max-width:1100px )
+            margin-bottom: 30px
             @media ( max-width:600px )
                 margin-bottom: 15px
                 font-size: 15px
@@ -222,3 +224,27 @@ body
         text-decoration: none
         color: $accent
         +bold
+
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(#000,.5)
+    display: none
+    &-active
+        display: flex
+    &-dialog
+        margin: auto
+        max-width: 400px
+        width: 90%
+        min-height: 200px
+        background-color: #fff
+        padding: 40px
+        position: relative
+        &__close
+            position: absolute
+            top: 0
+            right: 0

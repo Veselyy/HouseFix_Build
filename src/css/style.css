@@ -307,7 +307,7 @@ body {
 .offer__contacts {
   display: flex;
 }
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .offer__contacts {
     flex-direction: column;
   }
@@ -322,7 +322,12 @@ body {
     margin-right: 0;
   }
 }
-@media (max-width: 1300px) and (max-width: 600px) {
+@media (max-width: 1100px) {
+  .offer__item1 {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1100px) and (max-width: 600px) {
   .offer__item1 {
     margin-bottom: 15px;
     font-size: 15px;
@@ -346,4 +351,31 @@ body {
   color: #333333;
   font-family: "Museo Sans  Bold", sans-serif;
   font-weight: 700;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.modal-active {
+  display: flex;
+}
+.modal-dialog {
+  margin: auto;
+  max-width: 400px;
+  width: 90%;
+  min-height: 200px;
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+}
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
