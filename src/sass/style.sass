@@ -25,7 +25,11 @@
     border: 1px solid $boder-input
     padding: 20px 25px
     font-size: 15px
- 
+.section-title
+    font-size: 30px
+    line-height: 45px
+    text-align: center
+    +bold
 body
     +reg
 
@@ -224,6 +228,27 @@ body
         text-decoration: none
         color: $accent
         +bold
+
+.portfolio
+    background: $grey url('../img/portfolio-bg.png') left repeat-y
+    background-size: 50%
+    padding: 100px 0
+    &__title
+        color: $accent
+        margin-bottom: 100px
+    &__arrows
+        max-width: 120px
+        margin: auto
+        display: flex
+        margin-top: 70px
+        justify-content: space-between
+
+.arrows__left, .arrows__right
+    cursor: pointer
+
+.slider
+    &__img
+        margin: auto
 
 
 .modal
