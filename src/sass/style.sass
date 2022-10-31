@@ -8,7 +8,7 @@
     max-width: 1170px
     width: 96%
     margin: auto
-    @media ( max-width:1300px  )
+    @media ( max-width: 1300px  )
         width: 90%
 .button
     padding: 19px 48px
@@ -30,6 +30,9 @@
     line-height: 45px
     text-align: center
     +bold
+.section-subtitle
+    font-size: 20px
+    line-height: 45px
 body
     +reg
 
@@ -233,9 +236,18 @@ body
     background: $grey url('../img/portfolio-bg.png') left repeat-y
     background-size: 50%
     padding: 100px 0
+    @media ( max-width: 800px )
+        background-size: 0%
+    @media ( max-width: 600px )
+        padding: 60px 0 80px
     &__title
         color: $accent
         margin-bottom: 100px
+        @media ( max-width: 600px )
+            font-size: 20px
+            line-height: 30px
+            margin-bottom: 50px
+            
     &__arrows
         max-width: 120px
         margin: auto
@@ -273,3 +285,83 @@ body
             position: absolute
             top: 0
             right: 0
+
+
+.price
+    padding: 100px 0
+    @media ( max-width: 600px )
+        padding: 60px 0
+    &__title
+        margin-bottom: 50px
+        @media ( max-width: 600px )
+            font-size: 18px
+            line-height: 30px
+            margin-bottom: 25px
+    &__subtitle
+        display: block
+        text-align: center
+        margin-bottom: 60px
+        @media ( max-width: 600px )
+            font-size: 14px
+            margin-bottom: 30px
+    &__card
+        margin-bottom: 30px
+.cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @media ( max-width: 1280px  )
+        justify-content: space-evenly
+        
+.card
+    border: 1px solid $card-border
+    text-align: center
+    transition: .2s
+    &:hover
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+        .card__img::before
+            opacity: 1
+    &__text
+        padding: 40px
+    &__title
+        margin: 0
+        font-size: 18px
+        margin-bottom: 30px
+        @media ( max-width: 600px )
+            font-size: 14px
+    &__img
+        position: relative
+        img
+            display: block
+        &::before
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
+            opacity: 0
+            transition: .2s
+    &__link
+        text-decoration: none
+        display: inline-block
+        +bold
+        color: $accent
+        line-height: 18px
+        position: relative
+        &:hover
+            &::after
+                height: 13px
+        &::after
+            content: ''
+            display: block
+            z-index: -1
+            width: 100%
+            height: 3px
+            background-color: $link-underline
+            position: absolute
+            bottom: -3px
+            left: 0
+            transition: .2s
+            
