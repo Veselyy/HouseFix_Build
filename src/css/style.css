@@ -543,4 +543,137 @@ body {
   bottom: -3px;
   left: 0;
   transition: 0.2s;
+}
+
+.steps {
+  padding: 120px;
+}
+@media (max-width: 1200px) {
+  .steps {
+    padding: 60px 0 20px 0;
+  }
+}
+@media (max-width: 600px) {
+  .steps {
+    padding: 0;
+  }
+}
+.steps__title {
+  max-width: 528px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+@media (max-width: 600px) {
+  .steps__title {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+}
+.steps__subtitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 75px;
+}
+@media (max-width: 600px) {
+  .steps__subtitle {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .icons {
+    flex-direction: column;
+  }
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+}
+.icon:last-child::after {
+  display: none;
+}
+.icon::after {
+  position: absolute;
+  content: "";
+  width: 72px;
+  height: 25px;
+  background-image: url(../img/iconArrowRight.png);
+  display: block;
+  top: -10px;
+  right: -95px;
+}
+@media (max-width: 1450px) {
+  .icon::after {
+    right: -50px;
+  }
+}
+@media (max-width: 1200px) {
+  .icon::after {
+    display: none;
+  }
+}
+.icon__image {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 3px solid #ffd200;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.icon img {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+.icon__text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 148px;
+}
+@media (max-width: 1200px) {
+  .icon__text {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .icon__text {
+    font-size: 12px;
+    margin-bottom: 70px;
+  }
+}
+
+.notice {
+  padding: 100px 0;
+  background-color: #ffc000;
+}
+@media (max-width: 600px) {
+  .notice {
+    padding: 70px 0;
+  }
+}
+.notice__title {
+  font-size: 32px;
+  line-height: 50px;
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .notice__title {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */
