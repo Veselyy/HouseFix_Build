@@ -456,4 +456,70 @@ body
         @media ( max-width: 600px )
             font-size: 18px
             line-height: 25px
+
+
+.info
+    padding: 100px 0 150px 0
+.benefits
+    display: flex
+    justify-content: space-between
+    @media ( max-width: 1300px )
+        flex-direction: column
+        justify-content: center
+.benefit
+    flex-direction: column
+    justify-content: space-between
+    height: 410px
+    max-width: 370px
+    position: relative
+    background-color: $benefit-bg
+    display: flex
+    @media ( max-width: 1300px )
+        width: 100%
+        margin: auto
+        margin-bottom: 100px
+    &__img
+        position: absolute
+        bottom: 0
+        left: 0
+    &__text
+        padding: 26px 80px 0 26px
+        font-size: 16px
+        line-height: 23px
+        strong
+            +bold
+        @media ( max-width: 600px )
+            font-size: 12px
             
+.documents
+    margin-top: 150px
+    @media ( max-width: 1300px )
+        margin-top: 100px
+    @media ( max-width: 600px )
+        margin-top: 0
+    &__title
+        margin-bottom: 100px
+        @media ( max-width: 600px )
+            font-size: 18px
+            line-height: 25px
+.documents-wrap
+    display: flex
+    justify-content: space-between
+    @media ( max-width: 950px )
+        flex-direction: column
+        
+    &__text
+        font-size: 18px
+        line-height: 24px
+        text-align: center
+        margin-top: 41px
+        @media ( max-width: 950px )
+            margin-top: 30px
+            margin-bottom: 120px
+        @media ( max-width: 600px )
+            font-size: 14px
+            margin-bottom: 60px
+            line-height: 18px
+    &__item
+        @media ( max-width: 950px )
+            margin: auto
