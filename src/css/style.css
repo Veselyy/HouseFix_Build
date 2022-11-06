@@ -104,9 +104,6 @@ body {
 }
 .header__button {
   margin-left: 30px;
-  padding: 19px 48px;
-  font-family: "Museo Sans  Bold", sans-serif;
-  font-weight: 700;
 }
 
 .main {
@@ -654,6 +651,11 @@ body {
 .info {
   padding: 100px 0 150px 0;
 }
+@media (max-width: 750px) {
+  .info {
+    padding: 100px 0 20px 0;
+  }
+}
 
 .benefits {
   display: flex;
@@ -925,6 +927,112 @@ body {
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.footer-block {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 640px) {
+  .footer-block {
+    display: block;
+  }
+}
+.footer__img {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 640px) {
+  .footer__img {
+    width: 100%;
+    position: static;
+  }
+}
+@media (max-width: 640px) {
+  .footer__img iframe {
+    height: 680px;
+  }
+}
+.footer__contacts {
+  padding: 100px 0 0 200px;
+  flex-basis: 50%;
+}
+@media (max-width: 1200px) {
+  .footer__contacts {
+    padding: 100px 0 0 100px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer__contacts {
+    padding: 30px 0 0 30px;
+  }
+}
+@media (max-width: 640px) {
+  .footer__contacts {
+    padding: 0;
+    margin: auto;
+    margin-top: 70px;
+  }
+}
+.footer__title {
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 100px;
+  font-family: "Museo Sans  Bold", sans-serif;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .footer__title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer__title {
+    margin-bottom: 50px;
+  }
+}
+
+.contacts-list {
+  list-style-type: none;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .contacts-list {
+    margin-bottom: 250px;
+  }
+}
+.contacts-list__item {
+  display: flex;
+  margin-bottom: 40px;
+}
+.contacts-list__item:last-child {
+  margin-bottom: 0;
+}
+.contacts-list__icon {
+  margin-right: 25px;
+}
+.contacts-list__text {
+  font-size: 16px;
+  line-height: 26px;
+}
+.contacts-list__text strong {
+  font-family: "Museo Sans  Bold", sans-serif;
+  font-weight: 700;
+}
+.contacts-list__text a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Museo Sans  Bold", sans-serif;
+  font-weight: 700;
 }
 
 .modal {

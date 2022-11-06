@@ -13,30 +13,24 @@ var close=$('#close')
     close.click(function(){
         modal.removeClass('modal-active');
     })
-    
+
 // Validace formuláře
 $('#brief-form').validate({
   rules: {
     // Musí být vyplnění
     username: "required",
-    email: {
-      required: true,
-      // Musí být vyplněný stylem pro email
-      email: true
-    }
-  },
+    phone: "required"
+    },
+  
   // Zprávy, které se zobrazí při erroru
   // Zprávy se přepíšou podle nás
     messages:{
       username: "Prosím vyplňte pole!",
-      email:{
-        required: "Prosím vyplňte pole!",
-        email: "Správně zformátujte text!"
-      }
-    }
+    },
+    phone: "Prosím vyplňte pole!"
 });
 
-
+// Slidern na webu a responzibilita
 $('.slider').slick({
     slidesToShow: 3,
     prevArrow: $('.arrows__left'),
@@ -56,6 +50,4 @@ $('.slider').slick({
         }      
       ]
 });
-
-
 })

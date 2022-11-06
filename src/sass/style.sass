@@ -42,10 +42,8 @@ body
         display: flex
         justify-content: space-between
         align-items: center
-
     &__info
         display: flex
-    
     &__contacts
         display: flex
         flex-direction: column
@@ -53,25 +51,20 @@ body
         justify-content: center
         @media( max-width: 600px  )
             display: none
-            
-
     &__address
         font-size: 13px
         color: $accent
         +reg
-
     &__phone
         font-size: 20px
         margin-top: 5px
         text-decoration: none
         color: $accent
         +bold
-
     &__button
         margin-left: 30px
-        padding: 19px 48px
-        +bold
     
+
 .main
     background-color: $grey
     padding: 35px 0 15px 0
@@ -246,18 +239,15 @@ body
         @media ( max-width: 600px )
             font-size: 20px
             line-height: 30px
-            margin-bottom: 50px
-            
+            margin-bottom: 50px  
     &__arrows
         max-width: 120px
         margin: auto
         display: flex
         margin-top: 70px
         justify-content: space-between
-
 .arrows__left, .arrows__right
     cursor: pointer
-
 .slider
     &__img
         margin: auto
@@ -435,6 +425,8 @@ body
 
 .info
     padding: 100px 0 150px 0
+    @media ( max-width: 750px )
+        padding: 100px 0 20px 0
 .benefits
     display: flex
     justify-content: space-between
@@ -612,9 +604,75 @@ body
             font-size: 14px
             line-height: 18px
         
+.footer
+    position: relative
+    @media ( max-width: 600px )
+    display: flex
+    flex-direction: column-reverse
+    &-block
+        display: flex
+        justify-content: flex-end
+        @media ( max-width: 640px )
+            display: block
+    &__img
+        width: 50%
+        position: absolute
+        top: 0
+        left: 0
+        @media ( max-width: 640px )
+            width: 100%
+            position: static
+            
+        iframe
+            @media ( max-width: 640px )
+                height: 680px
         
-        
+    &__contacts
+        padding: 100px 0 0 200px
+        flex-basis: 50%
+        @media ( max-width: 1200px )
+            padding: 100px 0 0 100px
+        @media ( max-width: 1000px )
+            padding: 30px 0 0 30px
+        @media ( max-width: 640px )
+            padding: 0
+            margin: auto
+            margin-top: 70px
 
+    &__title
+        font-size: 22px
+        line-height: 33px
+        margin-bottom: 100px
+        +bold
+        @media ( max-width: 600px )
+            font-size: 18px
+            line-height: 24px
+            margin-bottom: 35px
+        @media ( max-width: 1000px )
+            margin-bottom: 50px
+.contacts-list
+    list-style-type: none
+    padding: 0
+    @media ( max-width: 600px )
+        margin-bottom: 250px
+    &__item
+        display: flex
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
+    &__icon
+        margin-right: 25px
+    &__text
+        font-size: 16px
+        line-height: 26px
+        strong
+            +bold
+        a
+            text-decoration: none
+            color: #000
+            +bold
+
+            
 
 .modal
     position: fixed
